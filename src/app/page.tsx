@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Input } from "@/components/shadcn/input";
@@ -14,8 +13,8 @@ const Particle = ({ index }: { index: number }) => (
       height: Math.random() * 4 + 1,
     }}
     animate={{
-      x: Math.random() * window.innerWidth,
-      y: Math.random() * window.innerHeight,
+      x: Math.random() * window?.innerWidth,
+      y: Math.random() * window?.innerHeight,
     }}
     transition={{
       duration: Math.random() * 10 + 20,
