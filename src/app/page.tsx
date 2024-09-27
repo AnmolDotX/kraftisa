@@ -13,8 +13,12 @@ const Particle = ({ index }: { index: number }) => (
       height: Math.random() * 4 + 1,
     }}
     animate={{
-      x: Math.random() * window?.innerWidth,
-      y: Math.random() * window?.innerHeight,
+      x:
+        Math.random() *
+        (typeof window !== "undefined" ? window?.innerWidth : 0),
+      y:
+        Math.random() *
+        (typeof window !== "undefined" ? window?.innerHeight : 0),
     }}
     transition={{
       duration: Math.random() * 10 + 20,
